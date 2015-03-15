@@ -1,0 +1,23 @@
+<!--
+<?xml version="1.0"?>
+
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="sales.order.grid.massaction">
+
+
+                    <arguments>
+                        <argument name="options" xsi:type="array">
+
+                            <item name="delete_order" xsi:type="array" >
+                                <item name="label" xsi:type="string" translate="true">Delete</item>
+                                <item name="url" xsi:type="string">deleteorder/order/massDelete</item>
+                            </item>
+                        </argument>
+                    </arguments>
+
+        </referenceBlock>
+    </body>
+</page>
+-->
