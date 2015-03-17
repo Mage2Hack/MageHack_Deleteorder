@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+
+    <body>
+        <!--<referenceBlock name="sales_order.grid.container">
+            <block class="Magento\Backend\Block\Widget\Grid\Massaction" name="sales.order.grid.massaction" as="grid.massaction">
+                <arguments>
+                    <argument name="options" xsi:type="array">
+                        <item name="delete_order" xsi:type="array">
+                            <item name="label" xsi:type="string" translate="true">Delete</item>
+                            <item name="url" xsi:type="string">deleteorder/order/massDelete</item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceBlock>-->
+
+        <referenceBlock name="sales.order.grid.massaction">
+            <arguments>
+                <argument name="massaction_id_field" xsi:type="string">entity_id</argument>
+                <argument name="form_field_name" xsi:type="string">order_ids</argument>
+                <argument name="use_select_all" xsi:type="string">0</argument>
+                <argument name="options" xsi:type="array">
+                    <updater>Magento\Sales\Model\Order\Grid\Massaction\ItemsUpdater</updater>
+                    <item name="cancel_order" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Cancel</item>
+                        <item name="url" xsi:type="string">sales/order/massCancel</item>
+                    </item>
+                    <item name="hold_order" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Hold</item>
+                        <item name="url" xsi:type="string">sales/order/massHold</item>
+                    </item>
+                    <item name="unhold_order" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Unhold</item>
+                        <item name="url" xsi:type="string">sales/order/massUnhold</item>
+                    </item>
+                    <item name="pdfinvoices_order" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Print Invoices</item>
+                        <item name="url" xsi:type="string">sales/order/pdfinvoices</item>
+                    </item>
+                    <item name="pdfshipments_order" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Print Packing Slips</item>
+                        <item name="url" xsi:type="string">sales/order/pdfshipments</item>
+                    </item>
+                    <item name="pdfcreditmemos_order" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Print Credit Memos</item>
+                        <item name="url" xsi:type="string">sales/order/pdfcreditmemos</item>
+                    </item>
+                    <item name="pdfdocs_order" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Print All</item>
+                        <item name="url" xsi:type="string">sales/order/pdfdocs</item>
+                    </item>
+                    <item name="print_shipping_label" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Print Shipping Labels</item>
+                        <item name="url" xsi:type="string">adminhtml/order_shipment/massPrintShippingLabel</item>
+                    </item>
+                    <item name="delete_order" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Delete</item>
+                        <item name="url" xsi:type="string">deleteorder/order/massDelete</item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+
+    </body>
+
+</page>
+
+
+
+
+
+<!--
+<?xml version="1.0"?>
+
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="sales.order.grid.massaction">
+
+
+                    <arguments>
+                        <argument name="options" xsi:type="array">
+
+                            <item name="delete_order" xsi:type="array" >
+                                <item name="label" xsi:type="string" translate="true">Delete</item>
+                                <item name="url" xsi:type="string">deleteorder/order/massDelete</item>
+                            </item>
+                        </argument>
+                    </arguments>
+
+        </referenceBlock>
+    </body>
+</page>
+-->
+
